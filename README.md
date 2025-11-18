@@ -2,7 +2,7 @@
 
 ## Intro
 For Terraform there are currently 2 collections:
-1. [cloud.terraform](https://console.redhat.com/ansible/automation-hub/repo/published/cloud/terraform/) - Maintained by Red Hat
+1. [cloud.terraform](https://console.redhat.com/ansible/automation-hub/repo/published/cloud/terraform/) - Maintained by Red Hat. It uses the terrform cli to talk to terraform.
 2. [hashicorp.terraform](https://console.redhat.com/ansible/automation-hub/repo/published/hashicorp/terraform/) - Maintained by HashiCorp
 All future development is on the hashicorp.terraform collection. It is the certified collection for integration with HashiCorp Terraform Enterprise and Cloud and it is based on the provided API. This workshop uses this collection where possible and falls back to the older cloud.terraform collection where needed. 
 
