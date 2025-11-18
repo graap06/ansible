@@ -5,7 +5,7 @@
   become: yes
 
   vars:
-    git_base: 
+    git_base: https://github.com/TechXchangeNL/website.git
 
   tasks:
   - name: Copy the code from repository
