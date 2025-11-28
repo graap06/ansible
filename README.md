@@ -83,15 +83,15 @@ keyed_groups:
   - `hostnames` is used to use the value of the tag `Name` as received from HCP to give the host its name.
   - `keyed_groups` is used to make inventory groups from tag values as received from HCP. So here a group will be created with prefix role and the value from tag Role as received from HPC. So: `role_<tagvalue>`. The host will be placed in this group.
 
-Also, you need the `Terraform Backend Configuration` Credential you made before as the credential for this source. You can test it by syncing the source manually. Do NOT enable _update on launch_.
+Also, you need the `Terraform Backend Configuration` Credential you made before as the credential for this source. You can test it by syncing the source manually.
+Do **NOT** enable _update on launch_.
 
 ### Job Templates
-Now that you have the basics set up (project, credential, inventory), you can define job templates in AAP. As you can see in the repository where this README lives, there are 4 playbooks:
-- deploy_servers.yml This playbook will apply a plan in Hashicorp Terraform Cloud.
-- update_server.yml. This playbook will update RHEL servers
+Now that you have the basics set up (project, credentials, inventory), you can define job templates in AAP. As you can see in the repository where this README lives, there are 3 playbooks:
+- apply_plan.yml This playbook will run and apply a plan in HCP.
 - deploy_webserver.yml. This playbook will deploy a webserver (apache)
 - deploy_website.yml. This playbook will dpeloy a website
-Have a look at the playbooks in this repo to get a sense of what they do.
+Have a look at the playbooks in this repo to get a sense of what they do. You might notice that the playbooks `deploy_webserver` and `deploy_website` are finished, but `apply_plan` is not. You need to develop this playbook yourself. Use the embedded editor in github. The documentation that you need can be found [here]().
 
 Create a Job Template for each of these playbooks.
 For the deploy_servers playbook:
